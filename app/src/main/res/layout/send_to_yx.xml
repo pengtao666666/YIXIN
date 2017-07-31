@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            style="@style/NavPage">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="测试社交平台的API"/>
+
+        <Button
+            android:id="@+id/reg_btn"
+            style="@style/YXLineActionButton"
+            android:layout_margin="10dp"
+            android:text="返回主界面"/>
+
+        <Button
+            android:id="@+id/getGameId"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="1.getGameId()"/>
+
+        <Button
+            android:id="@+id/getApplicationContext"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="2.getApplicationContext()"/>
+
+        <Button
+            android:id="@+id/getAccountInfo"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="3.getAccountInfo(String accessToken)"/>
+
+        <Button
+            android:id="@+id/getFriendList"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="4.getFriendList(String accessToken)"/>
+
+        <Button
+            android:id="@+id/applyAddFriend"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="5.applyAddFriend(String accessToken, String accountId)"/>
+
+        <Button
+            android:id="@+id/getTopBoardList"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="6.getTopBoardList(String accessToken, String customBoardCode, int limit)"/>
+
+        <Button
+            android:id="@+id/getFriendBoardList"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="7.getFriendBoardList(String accessToken, String customBoardCode)"/>
+
+        <Button
+            android:id="@+id/updateBoardScore"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="8.updateBoardScore(String accessToken, String customBoardCode, BigDecimal value)"/>
+
+        <Button
+            android:id="@+id/inviteFriend"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="9.inviteFriend(String accessToken, String accountId, AppMessage appMessage)"/>
+
+        <Button
+            android:id="@+id/sendMessageToGameFriend"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="10.sendMessageToGameFriend(String accessToken, String accountId, AppMessage appMessage)"/>
+
+        <Button
+            android:id="@+id/sendMessageToCircle"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="11.sendMessageToCircle(String accessToken, AppMessage appMessage)"/>
+
+        <Button
+            android:id="@+id/sendShareMessageToGameFriend"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="12.sendShareMessageToGameFriend"/>
+
+        <Button
+            android:id="@+id/sendShareMessageToCircle"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="13.sendShareMessageToCircle"/>
+
+        <Button
+            android:id="@+id/onGameStart"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="14.onGameStart(String accessToken)"/>
+
+        <Button
+            android:id="@+id/onGameEnd"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="15.onGameEnd(String accessToken)"/>
+
+        <Button
+            android:id="@+id/uploadFile"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="16.uploadFile(String accessToken,File file)"/>
+
+        <Button
+            android:id="@+id/uploadFileByte"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="17.uploadFile(String accessToken,byte[] byte)"/>
+
+        <Button
+            android:id="@+id/getUserRank"
+            style="@style/YXLineActionButton"
+            android:layout_margin="2dp"
+            android:text="18.getUserRank(String boardcode, String token)"/>
+
+    </LinearLayout>
+</ScrollView>

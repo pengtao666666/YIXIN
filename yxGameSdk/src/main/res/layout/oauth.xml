@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              style="@style/NavPage"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/result_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="易信游戏平台社交SDK-OAUTH"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/reg_btn"
+        style="@style/YXLineActionButton"
+        android:layout_margin="10dp"
+        android:text="授权"/>
+
+    <Button
+        android:id="@+id/logout"
+        style="@style/YXLineActionButton"
+        android:layout_margin="10dp"
+        android:text="登出"/>
+
+    <Button
+        android:id="@+id/cancel_oauth_btn"
+        style="@style/YXLineActionButton"
+        android:layout_margin="8dp"
+        android:text="取消授权"/>
+
+    <Button
+        android:id="@+id/quit_btn"
+        style="@style/YXLineActionButton"
+        android:layout_margin="8dp"
+        android:text="返回主界面"/>
+
+    <TextView
+        android:id="@+id/result_token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="@dimen/BasicTextSize"/>
+
+</LinearLayout>

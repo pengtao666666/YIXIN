@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    lintOptions {
+        abortOnError false
+    }
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        debug {
+            shrinkResources false
+        }
+        release {
+            shrinkResources false
+//            multiDexEnabled true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    //    compile 'com.android.support:support-v4:18.+'
+    //    compile 'com.google.code.gson:gson:2.2.2'
+    //    compile 'com.kf.framework:framework:latest.integration@aar'
+    //31 need update Demo
+    compile 'com.kf.framework:kfsdk:latest.integration@aar'
+    compile 'com.kf.framework:kf-utils:latest.integration@aar'
+    compile 'com.kf.framework:volleyplus:latest.integration@aar'
+    testCompile 'junit:junit:4.12'
+    //TODO B0-start import 1-compile jar at libs 2-jni at src/main/jniLibs 3-needed res 4-assets at src/main/assets
+    //TODO B0-start 引入渠道依赖,比如依赖module,jar,aar,jni,等待,构建成功后继续
+    compile project(':yxGameSdk')
+}

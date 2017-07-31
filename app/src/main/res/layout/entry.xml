@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fillViewport="true"
+            android:scrollbars="vertical">
+
+    <LinearLayout
+        style="@style/NavPage"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/result_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="易信游戏平台社交SDK测试DEMO"
+            android:textSize="20dp"/>
+
+        <Button
+            android:id="@+id/reg_btn"
+            style="@style/YXLineActionButton"
+            android:layout_margin="10dp"
+            android:text="1.注册游戏APP"/>
+
+        <Button
+            android:id="@+id/launch_yx_btn"
+            style="@style/YXLineActionButton"
+            android:layout_margin="10dp"
+            android:singleLine="false"
+            android:text="2.绑定OAUTH"/>
+
+        <Button
+            android:id="@+id/goto_send_btn"
+            style="@style/YXLineActionButton"
+            android:layout_margin="10dp"
+            android:text="3.测试发送接口"/>
+
+        <Button
+            android:id="@+id/quit_btn"
+            style="@style/YXLineActionButton"
+            android:layout_margin="10dp"
+            android:text="4.取消注册游戏app"/>
+
+        <Button
+            android:id="@+id/pay_btn"
+            style="@style/YXLineActionButton"
+            android:layout_margin="10dp"
+            android:text="5.测试游戏支付接口"/>
+
+        <Button
+            android:id="@+id/check_timeline_supported_btn"
+            style="@style/YXLineActionButton"
+            android:layout_margin="10dp"
+            android:text="@string/check_timeline_supported"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="易信游戏平台社交SDK0测试DEMO已经启动"
+            android:textSize="@dimen/BasicTextSize"/>
+    </LinearLayout>
+
+</ScrollView>

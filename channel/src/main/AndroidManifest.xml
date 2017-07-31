@@ -1,0 +1,56 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kf.demo.channel">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+        <activity
+            android:name="com.wyd.hero.yqlfc.cb1.mzw.yixin.yxapi.YXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name="im.yixin.gamesdk.activity.YXComponentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+
+        <receiver
+            android:name="com.wyd.hero.yqlfc.cb1.mzw.yixin.yxapi.AppRegister"
+            android:permission="im.yixin.sdk.permission.YIXIN_SDK_MESSAGE">
+            <intent-filter>
+                <action android:name="im.yixin.sdk.api.Intent.ACTION_REFRESH_YXAPP"/>
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="YX_GAME_ID"
+            android:value="ga8af8e8075ba46192015c0add5b0b0077"/>
+
+        <meta-data
+            android:name="YX_GAME_SECRET"
+            android:value="8f8e721efb983e4cb"/>
+        <!-- 渠道号   注意格式必须为\+空格+渠道号(flashAIR的游戏除外) -->
+        <meta-data
+            android:name="HJR_CHANNEL"
+            android:value="\ CHANNEL_YIXIN" />
+    </application>
+
+</manifest>

@@ -1,0 +1,33 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.5.0'
+        classpath 'com.droidtitan:lint-cleaner-plugin:0.3.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        // TODO A0-start 如果渠道有Library工程,导入工程作为Module, 主菜单 File -> New -> Import Module
+        maven { url "https://github.com/KuaiFaMaster/kfsdk/raw/master" }
+        // 访问github太慢, 使用这个本地镜像地址的仓库
+        // 这个仓库的代码版本可能不是最新,提醒一下推送内网镜像, 记得调试完成改成github的地址
+//        maven { url "http://10.8.230.251/tianran/kfsdk_mirror/raw/master" }
+        // 构建加速地址 - 只能在10.8.230.251 jenkins服务器上使用
+//        maven { url "file:////home/server/tmp/repo/kfsdk" }
+        // 测试发布本地镜像
+//        maven { url "file:///Users/sinlov/Documents/CodeZoo/kf_repo/kfsdk" }
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

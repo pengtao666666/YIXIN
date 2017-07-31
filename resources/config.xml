@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<config>
+    <apktool v="apktool_2.0.0rc3.jar" />
+    <v4 v="false" />
+	<Fields>
+		<field default="" extInfo="" inDev="0" inManifest="1" inProperties="0" key="YX_GAME_ID" label="gameId" require="1" showType="1" type="0" />
+		<field default="" extInfo="" inDev="0" inManifest="1" inProperties="0" key="YX_GAME_SECRET" label="gameSecret" require="1" showType="1" type="0" />
+		<field default="" extInfo="" inDev="0" inManifest="0" inProperties="0" key="privateKey" label="privateKey" require="1" showType="1" type="0" />
+		<field default="" extInfo="" inDev="0" inManifest="0" inProperties="1" key="notifyUri" label="支付回调地址" require="" showType="1" type="0" />
+		<field default="online" extInfo="offline|online" inDev="0" inManifest="0" inProperties="1" key="gameType" label="游戏类型" require="1" showType="1" type="2" />
+		<field default="product" extInfo="debug|product" inDev="0" inManifest="0" inProperties="1" key="debugMode" label="正式模式" require="1" showType="1" type="2" />
+		<field default="" extInfo="" inDev="0" inManifest="0" inProperties="0" key="game_product_ids" label="商品列表" require="1" showType="101" type="0" />
+		<field extInfo="右上角|右下角|左上角|左下角" showType="5" key="corner_icon" />
+	</Fields>
+	<operateLs>
+        <operate from="ForManifest.xml" name="modifyManifest" to="AndroidManifest.xml" />
+		<operate from="ForAssets" name="copy" to="assets" />
+        <operate from="ForRes" name="copy" to="res" />
+        <operate from="ForLibs" name="copy" to="lib" />
+        <operate name="mergeR" />
+		<operate name="script" />
+	</operateLs>
+
+</config>
